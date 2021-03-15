@@ -22,9 +22,6 @@ namespace INZFS.MVC.Migrations
             _contentDefinitionManager.AlterTypeDefinition(nameof(EligibilityCreiteria), type => type
                .Creatable()
                .Listable()
-
-               // We attach parts by specifying their name. For our own parts we use nameof(): This is not mandatory
-               // but serves great if we change the part's name during development.
                .WithPart(nameof(EligibilityCreiteria))
            );
 

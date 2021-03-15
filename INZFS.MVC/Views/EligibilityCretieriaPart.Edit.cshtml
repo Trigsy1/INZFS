@@ -1,0 +1,45 @@
+@* As you can see the model here is the view model object this time not a ShapeViewModel<T>. *@
+
+@model EligilityCreiteriaViewModel
+@using INZFS.MVC.ViewModels
+@using INZFS.MVC.Models
+
+@* Nothing special here regarding the editor fields. However, notice that the Biography (ContentField) editor is not
+    here, because (as mentioned) it has its own editor and display shape so no need to worry about that. *@
+
+
+
+<!--<div class="govuk-form-group" asp-validation-class-for="Name">
+    <label class="govuk-label" asp-for="TechnologyAndInnovation">
+    </label>-->
+    
+    <!--<span asp-validation-for="TechnologyAndInnovation" class="govuk-error-message"></span>
+    <input class="govuk-input govuk-input--width-10" asp-for="TechnologyAndInnovation" spellcheck="false" aria-describedby="name-hint">
+</div>-->
+
+
+<div class="govuk-form-group" asp-validation-class-for="Name">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+      <legend class="govuk-fieldset__legend">
+          Has the proposed project reached TRL3 before it will commence?
+      </legend>
+    <div id="changed-name-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently.
+    </div>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="TechnologyAndInnovation" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="TechnologyAndInnovation" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>

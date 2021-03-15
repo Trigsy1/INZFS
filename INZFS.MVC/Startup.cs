@@ -26,6 +26,10 @@ namespace INZFS.MVC
             services.AddContentPart<ProposalSummaryPart>()
                .UseDisplayDriver<ProposalSummaryPartDisplayDriver>();
             services.AddScoped<IDataMigration, ProposalSummaryMigration>();
+
+            services.AddContentPart<EligibilityCreiteria>()
+               .UseDisplayDriver<EligilityCreiteriaDriver>();
+            services.AddScoped<IDataMigration, EligibilityCreiteriaMigration>();
         }
 
         public override void Configure(IApplicationBuilder builder, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
